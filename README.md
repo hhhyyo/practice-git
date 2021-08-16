@@ -51,7 +51,3 @@ print("Hello world")
 [Goto google](https:www.google.com/)
 
 ![git_logo](https://gitforwindows.org/img/git_logo.png)
-
-
-hello
-test
