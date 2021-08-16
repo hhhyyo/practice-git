@@ -1,0 +1,96 @@
+*, *::before, *::after{
+    box-sizing: border-box; /*마진을 포함하지않는다*/
+}
+
+body{
+    margin: 0;
+}
+
+.container{
+   background-color: #F9F7EA;
+}
+
+.header, .visual, .main, .slogan{
+    width: 940px;
+    margin: 0 auto;
+    
+}
+
+.header{
+    background-color: #E6EDE8;
+    position: relative; /*static만 아니면 된다*/
+}
+
+.logo{
+    position: absolute;
+    left:0;
+    right: 0;
+    text-align: center;
+    margin: 0;
+}
+
+.member-service{
+    list-style: none;
+    display: flex;
+    padding-left: 0;
+}
+
+.member-service li{
+    padding: 0.5em;
+    text-transform: uppercase;
+}
+
+.member-service a{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.5em;
+}
+
+.member-service li:nth-child(3){
+    margin-right: auto;
+}
+
+.visual{
+    background-color: #D3E4E8;
+}
+
+.main{
+    background-color: #B6CADC;
+    height: 50vh; /*뷰포트 절반*/
+    display: flex;
+    padding: 30px;
+    justify-content: space-between;
+}
+
+.group{
+    /*
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 100%;*/
+    /*flex: 1 1 100%;*/ /*단축속성*/
+}
+
+.group1{
+    background-color: #9BBCE3;
+    /*flex-basis: 50%;*/
+    width: 250px;
+    order: 1;
+}
+
+.group2{
+    background-color: #80ADE9;
+    width: 380px;
+}
+
+.group3{
+    background-color: #A1ABD1;
+    width: 190px;
+}
+
+.slogan{
+    background-color: #BEA9C7;
+}
+
+.footer{
+    background-color: #AD9AB5;
+}

@@ -1,0 +1,198 @@
+@import url(./fonts.css);
+
+*, *::before, *::after{
+    box-sizing: border-box; /*마진을 포함하지않는다*/
+}
+
+a{
+    text-decoration: none;
+    color: inherit; /*부모가 가지고있는 글자색을 상속받는다*/
+}
+
+/* 숨김 콘텐츠 */
+.a11y-hidden{
+    background-color: red;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    clip: rect(0 0 0 0);
+    clip: rect(0,0,0,0);
+    overflow: hidden;
+}
+
+body{
+    font-family: 'Spoqa Han Sans Neo',sans-serif;
+    font-weight: 400;
+    margin: 0;
+}
+
+.container{
+   background-color: #E7E1FF;
+}
+
+.header, .visual, .main, .slogan{
+    width: 940px;
+    margin: 0 auto;
+    
+}
+
+.header{
+    background-color: #FFFFFF;
+    position: relative;
+    border-radius: 0 0 15px 15px;
+}
+
+/*
+.box{
+    background-color: red;
+    height: 50px;
+    transform: translateX(200px);
+}*/
+
+.logo{
+    margin-top: 0;
+    margin-bottom: 0;
+    position: absolute;
+    top: 45px;
+    left: 65px;
+    font-size: 1rem;
+    line-height: 1;
+}
+
+.logo a, .logo img{
+    display: block;
+}
+
+/* flex 이용하기 */
+/*
+.member-service{
+    background-color: yellow;
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+    margin: 0;
+    padding-left:0;
+}
+
+.member-service li{
+    padding-left: 20px;
+    text-transform: uppercase;
+}
+*/
+
+.member-service{
+    background-color: yellow;
+    margin: 0;
+    padding-left:0;
+    font-size: 0;
+    line-height: 0;
+    text-align: right;
+    padding: 2px 0;
+    margin-right:-10px;
+}
+
+.member-service li{
+    /* float: right;*/ /*float 사용하면 복잡*/
+    display: inline-block; /* IE7 까지 호환 */
+    font-size: 0.875rem;
+    line-height: 1.25;
+}
+
+/*두번째부터 모든 li를 선택*/
+.member-service li:nth-child(n+2)::before{
+    content: ":";
+}
+
+/*
+.member-service li::before{
+    content: ":";
+}
+
+/*첫번째부터 :을 빼주면 더 좋다*/
+.member-service li:first-child::before{
+    content: "";
+}
+*/
+
+/* a태그에 패딩을 줘서 사용성을 증가시킨다*/
+.member-service a{
+    display: inline-block;
+    padding: 8px;
+}
+
+
+
+
+
+
+
+
+
+.visual{
+    background-color: #FDFFB6;
+}
+
+.main{
+    background-color: #CAFFBF;
+    /* height: 50vh; 뷰포트 절반 */
+    /* height: 400px; 높이를 고정하는것은 좋지 않다 */
+    /* overflow: hidden;  */
+    /* float: left; */
+    display: flow-root; /*모던웹에서 float해결방법*/
+    padding: 30px 15px;
+    min-height: 450px;
+}
+
+/* .main::after{
+    content: "";
+    display: block;
+    clear: both;
+} */
+
+.clearfix{
+    height: 20px;
+    clear: both;
+}
+
+.group{
+    /*
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 100%;*/
+    /*flex: 1 1 100%;*/ /*단축속성*/
+    /* height: 30vh;
+    width: 200px; */
+    margin: 0 15px;
+}
+
+.group1{
+    background-color: #9BF6FF;
+    /*flex-basis: 50%;*/
+    width: 250px;
+    /* order: 1; */
+    float: left;
+    /* position: relative;
+    top:-20px;
+    left: -20px; */
+}
+
+.group2{
+    background-color: #A0C4FF;
+    width: 380px;
+    float: left;
+}
+
+.group3{
+    background-color: #BDB2FF;
+    width: 190px;
+    float: left;
+}
+
+.slogan{
+    background-color: #FFC6FF;
+}
+
+.footer{
+    background-color: #FFADAD;
+}
